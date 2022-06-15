@@ -162,11 +162,10 @@ export const Header = ({ fan }) => {
             <FormControlLabel
                 control={<MaterialUISwitch sx={{ m: 1 }} defaultChecked />}
                 label="Switch theme"
-                style={{ color: "white" }}
+                className={`${theme === "light" ? "light" : "dark"}`}
                 onChange={changeTheme}
             />
             <div className="search-layout">
-                <IconSearchSVG className="search-icon" />
                 <Search>
                     <SearchIconWrapper>
                         <SearchIcon />
@@ -176,7 +175,10 @@ export const Header = ({ fan }) => {
                         inputProps={{ "aria-label": "search" }}
                     />
                 </Search>
-                <div style={{ color: "white", paddingTop: "1rem" }}>
+                <div
+                    className={`${theme === "light" ? "light" : "dark"}`}
+                    style={{ paddingTop: "1rem" }}
+                >
                     I am fan of: {fan}
                 </div>
             </div>

@@ -8,13 +8,20 @@ const Footer = () => {
 
     return (
         <footer className={`footer  ${theme === "light" ? "light" : "dark"}`}>
-            <div className="footer-text">
+            <div
+                className={`footer-text  ${
+                    theme === "light" ? "light" : "dark"
+                }`}
+            >
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Nesciunt vel voluptates quibusdam corrupti cumque quae
                 necessitatibus velit ratione illum maxime. Cum quae, repellat
                 autem dolore quibusdam quidem maxime inventore magnam!
             </div>
-            <div className="footer-links">
+            <div
+                className={`footer-links ${theme === "light" ? "light" : "dark"}
+                    `}
+            >
                 <a
                     className="footer-link"
                     href="https://www.youtube.com/watch?v=4HLDaBGdnLc&ab_channel=EAStarWars"
